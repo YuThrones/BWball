@@ -24,7 +24,7 @@ public class buffContainer : MonoBehaviour
         List<Buff> destroyList = new List<Buff>();
         foreach (Buff buff in buffs)
         {
-            buff.Update(gameObject);
+            buff.FixedUpdate(gameObject);
             if (buff.isDestroy)
             {
                 destroyList.Add(buff);
@@ -40,6 +40,7 @@ public class buffContainer : MonoBehaviour
     public void AddBuff(Buff buff)
     {
         buffs.Add(buff);
+        buff.Start(gameObject);
     }
 
     public float GetSpeedRate()

@@ -11,12 +11,14 @@ public class controll : MonoBehaviour
     private bool isJump;
     //public int color;
     public GameColor color;
+    private GameColor coverColor;
     // public Transform transform;
     // Start is called before the first frame update
     Rigidbody2D rigitbody;
     void Start()
     {
         rigitbody = gameObject.GetComponent<Rigidbody2D>();
+        coverColor = color;
     }
 
     // Update is called once per frame
@@ -57,20 +59,11 @@ public class controll : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f);
-        //if (hit.collider != null && rigitbody.velocity.y < 0.0001)
-        //{
-        //    Debug.Log("取消跳跃限制");
-        //    isJump = false;
-        //}
-
         if (collision.gameObject.tag == "Floor")
         {
             if (collision.gameObject.transform.position.y < gameObject.transform.position.y && rigitbody.velocity.y < 0.01)
             {
-                //Debug.Log("取消跳跃限制");
                 isJump = false;
-
 
                 if (collision.gameObject.GetComponent<Floor>().color == GameColor.None)
                 {
@@ -81,7 +74,7 @@ public class controll : MonoBehaviour
                     //Debug.Log("灰色瓷砖");
                     collision.gameObject.GetComponent<Floor>().DestroyAfterDelay();
                 }
-                else if (collision.gameObject.GetComponent<Floor>().color != this.color)
+                else if (collision.gameObject.GetComponent<Floor>().color != GetColor() && GetColor() != GameColor.None)
                 {
                     //Debug.Log("不同颜色瓷砖");
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
@@ -139,5 +132,22 @@ public class controll : MonoBehaviour
     }
 
     void FixedUpdate() {
+    }
+
+    public void ChangeColor(GameColor newColor)
+    {
+        coverColor = newColor;
+        Debug.Log("变色" + coverColor);
+    }
+
+    public void RecoverColor()
+    {
+        coverColor = color;
+        Debug.Log("恢复颜色" + coverColor);
+    }
+
+    GameColor GetColor()
+    {
+        return coverColor;
     }
 }

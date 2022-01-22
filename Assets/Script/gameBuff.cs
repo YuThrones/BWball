@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using gameEnum;
 
 namespace gameBuff
 {
@@ -10,12 +11,21 @@ namespace gameBuff
     public class Buff
     {
         public bool isDestroy = false;
+        public virtual void Start(GameObject gameObject)
+        {
+
+        }
         public virtual void Update(GameObject gameObject)
         {
 
         }
 
         public virtual void FixedUpdate(GameObject gameObject)
+        {
+
+        }
+
+        public virtual void End(GameObject gameObject)
         {
 
         }
@@ -59,6 +69,43 @@ namespace gameBuff
                 Debug.Log("¼õËÙ½áÊø");
                 isDestroy = true;
             }
+        }
+    }
+
+    public class BallColorBuffEffect: Buff
+    {
+        public GameColor changeColor;
+        public float duration;
+        private float timeCount = 0;
+
+        public BallColorBuffEffect(GameColor changeColor, float duration)
+        {
+            this.changeColor = changeColor;
+            this.duration = duration;
+        }
+
+        override public void Update(GameObject gameObject)
+        {
+            timeCount += Time.deltaTime;
+        }
+
+        override public void FixedUpdate(GameObject gameObject)
+        {
+            if (timeCount > duration)
+            {
+                End(gameObject);
+            }
+        }
+
+        override public void Start(GameObject gameObject)
+        {
+            gameObject.GetComponent<controll>().ChangeColor(changeColor);
+        }
+
+        override public void End(GameObject gameObject)
+        {
+            isDestroy = true;
+            gameObject.GetComponent<controll>().RecoverColor();
         }
     }
 }
