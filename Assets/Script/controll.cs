@@ -17,13 +17,11 @@ public class controll : MonoBehaviour
     void Start()
     {
         rigitbody = gameObject.GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         int input = GetControllDir();
 
         if (IsPress(input, InputControll.Left) && IsPress(input, InputControll.Right)) {
