@@ -70,7 +70,7 @@ public class controll : MonoBehaviour
         {
             if (collision.gameObject.transform.position.y < gameObject.transform.position.y && rigitbody.velocity.y < 0.01)
             {
-                Debug.Log("取消跳跃限制");
+                //Debug.Log("取消跳跃限制");
                 isJump = false;
 
 
@@ -80,17 +80,17 @@ public class controll : MonoBehaviour
                 }
                 else if (collision.gameObject.GetComponent<Floor>().color == GameColor.Gray)
                 {
-                    Debug.Log("灰色瓷砖");
+                    //Debug.Log("灰色瓷砖");
                     collision.gameObject.GetComponent<Floor>().DestroyAfterDelay();
                 }
                 else if (collision.gameObject.GetComponent<Floor>().color != this.color)
                 {
-                    Debug.Log("不同颜色瓷砖");
+                    //Debug.Log("不同颜色瓷砖");
                     GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
                 }
                 else
                 {
-                    Debug.Log("同色瓷砖");
+                    //Debug.Log("同色瓷砖");
                 }
             }
         }
