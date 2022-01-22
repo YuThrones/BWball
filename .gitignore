@@ -91,3 +91,4 @@ $RECYCLE.BIN/
 
 !*.exe
 !*.dll
+*.log
