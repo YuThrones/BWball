@@ -22,7 +22,7 @@ public class cameraControll : MonoBehaviour
         foreach(GameObject ball in balls)
         {
             Vector3 pos = selfCemera.WorldToViewportPoint(ball.transform.position);
-            if (pos.y < 0 || pos.y > 1)
+            if (pos.y < 0 || pos.y > 1 || pos.x < 0 || pos.x > 1)
             {
                 //GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
             }
