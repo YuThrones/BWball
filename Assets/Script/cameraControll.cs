@@ -22,6 +22,10 @@ public class cameraControll : MonoBehaviour
         if (speed < maxSpeed)
         {
             speed += addSpeed * Time.deltaTime;
+            if (speed > maxSpeed)
+            {
+                speed = maxSpeed;
+            }
         }
 
         transform.position = new Vector3(transform.position.x, transform.position.y + GetSpeed() * Time.deltaTime, transform.position.z);
@@ -32,7 +36,7 @@ public class cameraControll : MonoBehaviour
             Vector3 pos = selfCemera.WorldToViewportPoint(ball.transform.position);
             if (pos.y < -0.1 || pos.y > 1 || pos.x < -0.1 || pos.x > 1.1)
             {
-                GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
+                //GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
             }
         }
     }
