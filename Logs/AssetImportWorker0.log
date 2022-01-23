@@ -1,23 +1,30 @@
+Unity Editor version:    2021.2.8f1c1 (cfd9db965adf)
+Branch:                  2021.2/china_unity/release
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.0.1 (Build 21A559)
+Darwin version:          21.1.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
 Using pre-set license
-Built from '2021.2/china_unity/release' branch; Version is '2021.2.8f1c1 (cfd9db965adf) revision 13621723'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit Professional' Language: 'en' Physical Memory: 32697 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+Pro License: NO
 
 COMMAND LINE ARGUMENTS:
-I:\Program Files\Unity\2021.2.8f1c1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-J:/Projects/BWball
+/Users/zhangwen/Documents/GitHub/BWball
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-3168
-Successfully changed project path to: J:/Projects/BWball
-J:/Projects/BWball
+63060
+Successfully changed project path to: /Users/zhangwen/Documents/GitHub/BWball
+/Users/zhangwen/Documents/GitHub/BWball
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -48,127 +55,218 @@ J:/Projects/BWball
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 AS: AutoStreaming module initializing.
-Refreshing native plugins compatible for Editor in 40.85 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 58.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.8f1c1 (cfd9db965adf)
-[Subsystems] Discovering subsystems at path I:/Program Files/Unity/2021.2.8f1c1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path J:/Projects/BWball/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/zhangwen/Documents/GitHub/BWball/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
-    Vendor:   NVIDIA
-    VRAM:     8079 MB
-    Driver:   30.0.14.7247
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
 Initialize mono
-Mono path[0] = 'I:/Program Files/Unity/2021.2.8f1c1/Editor/Data/Managed'
-Mono path[1] = 'I:/Program Files/Unity/2021.2.8f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'I:/Program Files/Unity/2021.2.8f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: I:/Program Files/Unity/2021.2.8f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004100 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 46.98 ms, found 3 plugins.
+Register platform support module: /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000869 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 58.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
+- Completed reload, in  1.306 seconds
 Domain Reload Profiling:
-	ReloadAssembly (623ms)
-		BeginReloadAssembly (93ms)
+	ReloadAssembly (1308ms)
+		BeginReloadAssembly (125ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (426ms)
-			LoadAssemblies (87ms)
+			CreateAndSetChildDomain (3ms)
+		EndReloadAssembly (1044ms)
+			LoadAssemblies (122ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (111ms)
+			SetupTypeCache (129ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (231ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (727ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (40ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (47ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (117ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (459ms)
+				ProcessInitializeOnLoadMethodAttributes (165ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.015468 seconds.
+Registered in 0.001750 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.93 ms, found 3 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 59.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.167 seconds
+- Completed reload, in  4.734 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1168ms)
-		BeginReloadAssembly (110ms)
+	ReloadAssembly (4737ms)
+		BeginReloadAssembly (235ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (37ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (955ms)
-			LoadAssemblies (76ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (4273ms)
+			LoadAssemblies (114ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (200ms)
+			SetupTypeCache (312ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (585ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (3576ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (26ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (35ms)
-				BeforeProcessingInitializeOnLoad (61ms)
-				ProcessInitializeOnLoadAttributes (427ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (60ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (3045ms)
+				ProcessInitializeOnLoadMethodAttributes (308ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2318 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (56.1 KB). Loaded Objects now: 2778.
-Memory consumption went from 105.0 MB to 104.9 MB.
-Total: 3.185000 ms (FindLiveObjects: 0.248100 ms CreateObjectMapping: 0.133700 ms MarkObjects: 2.735900 ms  DeleteObjects: 0.065600 ms)
+Unloading 3782 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (0.7 MB). Loaded Objects now: 4236.
+Memory consumption went from 350.9 MB to 350.2 MB.
+Total: 3.672333 ms (FindLiveObjects: 0.223667 ms CreateObjectMapping: 0.095791 ms MarkObjects: 3.038833 ms  DeleteObjects: 0.312792 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 573046.793210 seconds.
-  path: Assets/BlackFloor.prefab
+  Time since last request: 335799.830751 seconds.
+  path: Assets/Prefab/BlackFloor.prefab
   artifactKey: Guid(3e788521ca578e8469806ab3901bea41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BlackFloor.prefab using Guid(3e788521ca578e8469806ab3901bea41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215b3d2d8645ca5fe38dacb57ab5751a') in 0.147770 seconds 
+Start importing Assets/Prefab/BlackFloor.prefab using Guid(3e788521ca578e8469806ab3901bea41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5fe901a3ab8555b9b34fa418f568496') in 0.672155 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/StatisFloor.prefab
+  Time since last request: 0.000307 seconds.
+  path: Assets/Prefab/WhiteFloor.prefab
+  artifactKey: Guid(ab92a1c08d69bec419696c0de33c286c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/WhiteFloor.prefab using Guid(ab92a1c08d69bec419696c0de33c286c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bde7282a30ba9edf83fabb4f2f72f1fc') in 0.026819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Prefab/StatisFloor.prefab
   artifactKey: Guid(30d7cc5a11036a24da9bfba1c4ad6979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StatisFloor.prefab using Guid(30d7cc5a11036a24da9bfba1c4ad6979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885ee5df44c12da2199c5891ebf8f524') in 0.012549 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Start importing Assets/Prefab/StatisFloor.prefab using Guid(30d7cc5a11036a24da9bfba1c4ad6979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef90d19b82f1c51bbe8ff6054aa3bc0') in 0.010644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.855543 seconds.
+  path: Assets/Materials/2DBasicMaterial.mat
+  artifactKey: Guid(14c6114bd9ccbf0488f427b4a671337c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/2DBasicMaterial.mat using Guid(14c6114bd9ccbf0488f427b4a671337c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3bc234ed6f39f731129c627c573001') in 0.206199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 149.960269 seconds.
+  path: Assets/Prefab/BlackFloor.prefab
+  artifactKey: Guid(3e788521ca578e8469806ab3901bea41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/BlackFloor.prefab using Guid(3e788521ca578e8469806ab3901bea41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd36a3190b8117c99e622e9cdcc72ebc7') in 0.010854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Prefab/WhiteFloor.prefab
+  artifactKey: Guid(ab92a1c08d69bec419696c0de33c286c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/WhiteFloor.prefab using Guid(ab92a1c08d69bec419696c0de33c286c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '407ac325ab0b7bc9990d6f9351ac5e79') in 0.009115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004706 seconds.
+  path: Assets/Prefab/StatisFloor.prefab
+  artifactKey: Guid(30d7cc5a11036a24da9bfba1c4ad6979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/StatisFloor.prefab using Guid(30d7cc5a11036a24da9bfba1c4ad6979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5dff34f431705d8291e8d039d056e42') in 0.008097 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001912 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.793 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2794ms)
+		BeginReloadAssembly (278ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (49ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (79ms)
+		EndReloadAssembly (2284ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (304ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (1545ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (1101ms)
+				ProcessInitializeOnLoadMethodAttributes (288ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3659 Unused Serialized files (Serialized files now loaded: 0)
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a segv while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Native stacktrace:
+=================================================================
+	0x15eb0688a - /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Frameworks/MonoBleedingEdge/MonoEmbedRuntime/osx/libmonobdwgc-2.0.dylib : mono_dump_native_crash_info
+	0x15eaacb93 - /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Frameworks/MonoBleedingEdge/MonoEmbedRuntime/osx/libmonobdwgc-2.0.dylib : mono_handle_native_crash
+	0x15ea29035 - /Applications/Unity/Hub/Editor/2021.2.8f1c1/Unity.app/Contents/Frameworks/MonoBleedingEdge/MonoEmbedRuntime/osx/libmonobdwgc-2.0.dylib : mono_sigsegv_signal_handler_debug
+	0x7ff8034c6e2d - /usr/lib/system/libsystem_platform.dylib : _sigtramp
+	0x0 - Unknown
+	0x1319a28e8e7c0 - Unknown
+
+=================================================================
+	Telemetry Dumper:
+=================================================================
+Thread 0x30ea59000 may have been prematurely finalized* Assertion at mono-threads.c:702, condition `info' not met, function:mono_thread_info_current, 
+* Assertion at threads.c:6918, condition `this_thread_controls == thread_given_control' not met
+async && (unwind_options & MONO_UNWIND_LOOKUP_ACTUAL_METHOD) not legal
