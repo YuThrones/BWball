@@ -5,6 +5,8 @@ using UnityEngine;
 public class cameraControll : MonoBehaviour
 {
     public float speed;
+    public float maxSpeed;
+    public float addSpeed;
     public Camera selfCemera;
     //public float speedRate;
     // Start is called before the first frame update
@@ -16,6 +18,12 @@ public class cameraControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //速度会每秒增加
+        if (speed < maxSpeed)
+        {
+            speed += addSpeed * Time.deltaTime;
+        }
+
         transform.position = new Vector3(transform.position.x, transform.position.y + GetSpeed() * Time.deltaTime, transform.position.z);
         //检测球是否在屏幕内
         GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
