@@ -8,11 +8,12 @@ public class cameraControll : MonoBehaviour
     public float maxSpeed;
     public float addSpeed;
     public Camera selfCemera;
+    public bool startMove;
     //public float speedRate;
     // Start is called before the first frame update
     void Start()
     {
-        //speedRate = 1;
+        startMove = false;
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class cameraControll : MonoBehaviour
         foreach(GameObject ball in balls)
         {
             Vector3 pos = selfCemera.WorldToViewportPoint(ball.transform.position);
-            if (pos.y < -0.1 || pos.y > 1 || pos.x < -0.1 || pos.x > 1.1)
+            if (pos.y < -0.1 || pos.x < -0.1 || pos.x > 1.1)
             {
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
             }
@@ -33,6 +34,10 @@ public class cameraControll : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!startMove)
+        {
+            return;
+        }
         //速度会每秒增加
         if (speed < maxSpeed)
         {

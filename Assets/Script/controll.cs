@@ -46,6 +46,7 @@ public class controll : MonoBehaviour
             //rigitbody.AddForce(Vector2.up * jumpForce);
             rigitbody.velocity = new Vector2(rigitbody.velocity.x, jumpForce);
             isJump = true;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraControll>().startMove = true;
         }
 
         transform.rotation = Quaternion.identity;
