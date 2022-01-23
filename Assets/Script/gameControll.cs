@@ -24,6 +24,13 @@ public class gameControll : MonoBehaviour
     {
         Debug.Log("”Œœ∑Ω· ¯");
         GDATA.lastTime = aliveTime;
+        gameObject.GetComponent<AudioSource>().Play();
+        //SceneManager.LoadScene("MainScene");
+        Invoke("DelayEnd", 1);
+    }
+
+    void DelayEnd()
+    {
         SceneManager.LoadScene("MainScene");
     }
 }

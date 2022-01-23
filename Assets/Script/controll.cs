@@ -47,6 +47,7 @@ public class controll : MonoBehaviour
             rigitbody.velocity = new Vector2(rigitbody.velocity.x, jumpForce);
             isJump = true;
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraControll>().startMove = true;
+            gameObject.GetComponent<AudioSource>().Play();
         }
 
         transform.rotation = Quaternion.identity;
