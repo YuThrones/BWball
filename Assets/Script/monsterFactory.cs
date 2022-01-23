@@ -24,7 +24,9 @@ public class monsterFactory : MonoBehaviour
             if (collision.gameObject.tag == "Ball")
             {
                 Vector3 monsterPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yOffset, gameObject.transform.position.z);
-                GameObject monsterPrefab = monsterList[Random.Range(0, monsterList.Length - 1)];
+                int index = Random.Range(0, monsterList.Length);
+                Debug.Log("Ë÷Òý");
+                GameObject monsterPrefab = monsterList[index];
                 GameObject.Instantiate(monsterPrefab, monsterPos, Quaternion.identity);
                 isCreate = true;
             }
