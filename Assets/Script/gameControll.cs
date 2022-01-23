@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using GlobalData;
 public class gameControll : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class gameControll : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("”Œœ∑Ω· ¯");
+        GDATA.lastTime = aliveTime;
         SceneManager.LoadScene("MainScene");
     }
 }
