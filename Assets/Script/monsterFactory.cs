@@ -7,7 +7,8 @@ public class monsterFactory : MonoBehaviour
 {
 
     public float yOffset;
-    public GameObject monsterPrefab;
+    public GameObject[] monsterList;
+
     private bool isCreate;
     void Start()
     {
@@ -23,6 +24,7 @@ public class monsterFactory : MonoBehaviour
             if (collision.gameObject.tag == "Ball")
             {
                 Vector3 monsterPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yOffset, gameObject.transform.position.z);
+                GameObject monsterPrefab = monsterList[Random.Range(0, monsterList.Length - 1)];
                 GameObject.Instantiate(monsterPrefab, monsterPos, Quaternion.identity);
                 isCreate = true;
             }

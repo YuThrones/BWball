@@ -9,7 +9,6 @@ public class ChangeFloorBuff : MonoBehaviour
     public float effectRadius;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,6 +27,7 @@ public class ChangeFloorBuff : MonoBehaviour
                 if (Vector2.Distance(gameObject.transform.position, floor.transform.position) < effectRadius)
                 {
                     floor.GetComponent<Floor>().color = GameColor.None;
+                    Sprite sp = floor.GetComponent<SpriteRenderer>().sprite;
                 }
             }
             Destroy(gameObject);

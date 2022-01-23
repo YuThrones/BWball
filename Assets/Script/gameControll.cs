@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class gameControll : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class gameControll : MonoBehaviour
     void Update()
     {
         aliveTime += Time.deltaTime;
+        GameObject.FindGameObjectWithTag("TimeText").GetComponent<TMP_Text>().text = "Time:" + (int)aliveTime;
     }
 
     public void GameOver()

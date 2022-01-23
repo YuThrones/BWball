@@ -18,17 +18,7 @@ public class cameraControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //速度会每秒增加
-        if (speed < maxSpeed)
-        {
-            speed += addSpeed * Time.deltaTime;
-            if (speed > maxSpeed)
-            {
-                speed = maxSpeed;
-            }
-        }
-
-        transform.position = new Vector3(transform.position.x, transform.position.y + GetSpeed() * Time.deltaTime, transform.position.z);
+        
         //检测球是否在屏幕内
         GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
         foreach(GameObject ball in balls)
@@ -43,6 +33,17 @@ public class cameraControll : MonoBehaviour
 
     void FixedUpdate()
     {
+        //速度会每秒增加
+        if (speed < maxSpeed)
+        {
+            speed += addSpeed * Time.fixedDeltaTime;
+            if (speed > maxSpeed)
+            {
+                speed = maxSpeed;
+            }
+        }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y + GetSpeed() * Time.fixedDeltaTime, transform.position.z);
     }
 
     private float GetSpeed()

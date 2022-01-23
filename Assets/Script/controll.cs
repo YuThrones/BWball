@@ -48,8 +48,7 @@ public class controll : MonoBehaviour
             isJump = true;
         }
 
-        Debug.DrawRay(transform.position, Vector2.down * 1f, Color.red);
-
+        transform.rotation = Quaternion.identity;
     }
 
     bool IsPress(int input, InputControll controll)
