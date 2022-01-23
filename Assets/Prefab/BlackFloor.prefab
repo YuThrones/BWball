@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5001356883208154286}
   - component: {fileID: 5001356883208154287}
   - component: {fileID: 5001356883208154288}
+  - component: {fileID: 1785907505}
   m_Layer: 0
   m_Name: BlackFloor
   m_TagString: Floor
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5001356883208154289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.15, y: -2.98, z: 0}
-  m_LocalScale: {x: 0.67763346, y: 0.1462196, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.028301895, g: 0.025471706, b: 0.025471706, a: 1}
+  m_Sprite: {fileID: 21300000, guid: edc40e6e369fe55498c01abc540ee39a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,18 +102,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0031163692, y: -0.0027365088}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.87, y: 0.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.8804126, y: 0.5457312}
   m_EdgeRadius: 0
 --- !u!50 &5001356883208154286
 Rigidbody2D:
@@ -168,3 +169,17 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &1785907505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001356883208154289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98352a0b1938cd4d80826c068fc3a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 10
+  monsterPrefab: {fileID: 3373137168436501653, guid: da05cb3dcfd0132468d87c128f8d2248, type: 3}
