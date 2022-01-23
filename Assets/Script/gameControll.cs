@@ -17,7 +17,10 @@ public class gameControll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        aliveTime += Time.deltaTime;
+        if (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraControll>().startMove)
+        {
+            aliveTime += Time.deltaTime;
+        }
         GameObject.FindGameObjectWithTag("TimeText").GetComponent<TMP_Text>().text = "Time:" + (int)aliveTime;
     }
 
