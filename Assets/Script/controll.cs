@@ -12,18 +12,30 @@ public class controll : MonoBehaviour
     //public int color;
     public GameColor color;
     private GameColor coverColor;
+    public Material dieMeterial;
     // public Transform transform;
     // Start is called before the first frame update
     Rigidbody2D rigitbody;
+    private bool isDie;
     void Start()
     {
         rigitbody = gameObject.GetComponent<Rigidbody2D>();
         coverColor = color;
+        isDie = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDie)
+        {
+            Renderer render = gameObject.GetComponent<Renderer>();
+            float fade = render.material.GetFloat("_Fade") - Time.deltaTime;
+            fade = fade < 0 ? 0 : fade;
+            render.material.SetFloat("_Fade", fade);
+            return;
+        }
+
         int input = GetControllDir();
 
         if (IsPress(input, InputControll.Left) && IsPress(input, InputControll.Right)) {
@@ -150,5 +162,13 @@ public class controll : MonoBehaviour
     GameColor GetColor()
     {
         return coverColor;
+    }
+
+    public void OnDie()
+    {
+        Renderer render = gameObject.GetComponent<Renderer>();
+        render.material = dieMeterial;
+        render.material.SetFloat("_Fade", 1);
+        isDie = true;
     }
 }

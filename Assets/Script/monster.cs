@@ -47,7 +47,6 @@ public class monster : MonoBehaviour
         else if (collision.gameObject.tag == "Ball")
         {
             //怪物撞到人，直接杀死
-            Debug.Log("怪物撞到人，直接杀死"+ this + collision.gameObject + gameObject.transform.position);
             GameObject.FindGameObjectWithTag("GameController").GetComponent<gameControll>().GameOver();
         }
 

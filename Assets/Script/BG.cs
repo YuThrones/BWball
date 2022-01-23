@@ -13,7 +13,6 @@ public class BG : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("³ß´ç" + prefab.GetComponent<SpriteRenderer>().size);
         bgSize = prefab.GetComponent<SpriteRenderer>().size;
         originPos = prefab.transform.position;
         bgs = new GameObject[3, 2];

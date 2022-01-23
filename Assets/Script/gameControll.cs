@@ -8,6 +8,7 @@ public class gameControll : MonoBehaviour
 {
     // Start is called before the first frame update
     private float aliveTime;
+    private bool isEnd = false;
     void Start()
     {
         aliveTime = 0;
@@ -22,10 +23,22 @@ public class gameControll : MonoBehaviour
 
     public void GameOver()
     {
+        if (isEnd)
+        {
+            return;
+        }
+        isEnd = true;
         Debug.Log("游戏结束");
         GDATA.lastTime = aliveTime;
         gameObject.GetComponent<AudioSource>().Play();
-        //SceneManager.LoadScene("MainScene");
+
+        //播所有球的死亡动画
+        GameObject[] balls = GameObject.FindGameObjectsWithTag("Ball");
+        foreach (GameObject ball in balls)
+        {
+            ball.GetComponent<controll>().OnDie();
+        }
+
         Invoke("DelayEnd", 1);
     }
 
